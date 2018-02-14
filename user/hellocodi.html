@@ -4,23 +4,43 @@
         <title>NOT THE BEES</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-
         <style type="text/css">
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
             
-            
+            #button1 {
+                align-self: center;
+                border: none;
+                width: 100%;
+                height: 100%;
+                font-style: bold;
+                font-size: 40pt;
+            }
+                
             
         </style>
     </head>
 
     <body>
-        <!-- Your HTML goes here -->
+        <button id= 'button1' onclick='playAudio()' >Click Barry to hear some jazz<img src= '480.png' style='width:70px;height:70px;'><p></p><img src= "barry.jpg"></button>
 
-        <!-- Uncomment to use external JavaScript
-        <script src="PATH/TO/EXTERNAL/SCRIPT.JS"></script>
-        -->
-
+        <audio id='audio'>
+            <source src="bee.mp3" type="audio/mpeg">
+            
+        </audio>
+        
         <script>
-            /* Your JS goes here */
+            function playAudio(){
+                var audio = document.getElementById('audio');
+                audio.play();
+                }
+            
         </script>
     </body>
+       
+        
 </html>
