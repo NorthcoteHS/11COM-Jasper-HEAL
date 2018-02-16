@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+   <html>
+    <head>
+        <style type='text/css'>
+        
+            #button1 {
+                align-self: center;
+                border: none;
+                width: 100%;
+                height: 100%;
+                font-style: bold;
+                font-size: 40pt;
+            }
+        
+        </style>
+    </head>
+    
+    <body>
+        
+        <button id='button1' onclick="randomresponse()">Ask Ainsley a question!<p></p><img src = 'flat,900x900,070,f.jpg' style = 'width:450px;height:450px'><div style='margin: 0 auto'><input type='text'><input type='submit'></div></button>
+        
+        <script>
+            var responses = [
+                'Yes',
+                'No',
+                'Maybe',
+                'Vapenation',
+                'Go away nerd'
+            ]
+            
+            function randomresponse() {
+                alert(responses[Math.floor(Math.random() * responses.length)])
+                
+            }
+            
+        </script>
+    </body>
+   </html>
