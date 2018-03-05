@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tab Directory</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <style type="text/css">
+            
+           h1,h2 {
+                text-align: center;
+            }
+            
+            p {
+                text-align: center;
+                font-family: Trebuchet MS;
+            }
+            
+            h3 {
+                text-align: center;
+                font-family: arial;
+            }
+            
+            #wrapper {
+                text-align: center;
+            }
+            
+            #titleimage {
+                width: 140px;
+                height: 60px;
+            }
+            
+            #graybar {
+                width: auto;
+                height: 20px;
+                color:burlywood;
+            }
+            
+            #orangetext {
+                color: darkorange;
+            }
+            
+            #button {
+                background-color: floralwhite;
+            }
+           
+            li a {
+                float: none;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-family: sans-serif;
+            }
+            
+            li {
+                float: left;
+                border-right:1px solid #bbb;  
+            }
+            
+            li a:hover {
+                background-color: cadetblue;
+            }
+            
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                background-color: cornflowerblue;
+                overflow: hidden;
+            }
+            
+            #dbdiv {
+                border-bottom: 4px double #333;
+            }
+            
+            .button1 {
+                border-radius: 12px;
+                border: 2px solid cornflowerblue;
+                background-color: cornflowerblue;
+                color: white;
+                
+            }
+            
+            .button1:hover {
+                border-radius: 12px;
+                border: 2px solid cadetblue;
+                background-color: cadetblue;
+                color: white;
+                
+            }
+            
+        </style>
+        
+        <link rel="icon" href="mando.png" type="image/png" />
+        
+    </head>
+
+    <body bgcolor=#b7ffb7>
+        
+        <h1 style="font-family: verdana;">Welcome to the Mandolin web companion!</h1>
+        <p>
+            <strong>Here you can find tabs, links to high quality luthiers, and other useful tools.</strong>
+        </p>
+        
+        <hr align='center' color=#0 noshade>
+        
+        <h2 style="font-family: arial">The Tab Index</h2>
+        
+        <p>
+            This is a collection of my favourite tabs, and ones I found useful for learning. I've tried to include a range of songs, from country to pop, and everything in between. There are sound files available to be played, as well as links to instructional videos/tabs etc.
+        </p>
+        
+        <hr align='center' color=#0 noshade>
+        
+        <div id="dbdiv">
+            <h3>Eddie Vedder - Rise</h3>
+            <p>
+        Probably the first song I learnt. It is fun to play, and a good introduction to chords. Sadly there is a severe lack<br>of notation on it, but it shouldn't be too hard to learn.
+            </p>
+        
+            <div id="wrapper">
+                <audio controls>
+                    <source src="rise.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        
+            <h3>
+                <a href="https://www.youtube.com/watch?v=VzhI7AfRfsU" target="_blank"><button class="button1">Video tutorial</button></a>
+            </h3>
+        
+            <h3>
+                <a href="https://www.mandolincafe.com%2Fforum%2Fshowthread.php%3F99571-Rise-Eddie-Vedder-Tab-attempt&usg=AOvVaw1ieDpVIh3DZzlksC-bwcfs" target="_blank"><button class="button1">Tab</button></a>
+            </h3>
+        </div>
+        
+        <div id="dbdiv">
+            <h3>The Road To Lisdoonvarna</h3>
+            <p>
+            A nice, simple tune that can be played slow or fast, depending on skill level. The tutorial I embedded is from<br><a href="https://www.mandolessons.com/" target="_blank">Mandolessons</a>, a great site I wholeheartedly recommend.
+            </p>
+            
+            <div id="wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Gbcnp5hPFs0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+                </iframe>
+                <br>
+                <h3><a href="http://www.mandolessons.com/lessons/fiddle-tunes/road-to-lisdoonvarna" target="_blank"><button class="button1">Play along tracks and sheet music</button></a></h3>
+            </div>
+        </div>
+        
+        <div id="dbdiv">
+            <h3>Swallowtail Jig</h3>
+            <p>
+            One of my favourite songs to play. Like the previous tune, it can be played fast or slow at any skill level.
+            </p>
+            
+            <div id="wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/1_zWHYbYGkE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <br>
+                <h3><a href="http://www.mandolessons.com/lessons/fiddle-tunes/swallowtail-jig/" target="_blank"><button class="button1">Play along tracks and sheet music</button></a></h3>
+            </div>
+        </div>
+        
+        <h3>House of Gold</h3>
+        <p>
+        This song by <a onclick="playAudio()" style="text-decoration: none;">21 Pilots</a> is played on the ukelele, and is fairly simple on the Mandolin. There is a tricky chord,<br>in the form of Am, but it is still relatively easy.
+        </p>
+        
+        <div id="wrapper">
+            <audio controls>
+                <source src="houseagold.mp3">
+            </audio>
+            <br>
+            <br>
+            
+            <a href="http://mandotabs.com/t/twenty-one-pilots/house-of-gold/" target="_blank"><button class="button1">Tab</button></a>
+            
+            <br>
+            <br>
+        </div>
+        
+        <audio>
+            <source src="this%20guy%20moaned%20at%20least%20this%20loud.mp3">
+        </audio>
+        
+        <script>
+            
+            function playAudio(){
+                var audio = document.getElementById('audio');
+                audio.play();
+                }
+            
+        </script>
+        
+        <ul>
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="fileindex.html">Tab Directory</a></li>
+            <li><a href="luthiers.html">Luthier Directory</a></li>
+        </ul>
+        
+    </body>
+</html>

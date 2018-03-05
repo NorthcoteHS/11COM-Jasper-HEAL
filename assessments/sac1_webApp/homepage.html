@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Homepage</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <style type="text/css">
+            
+            h1,h3 {
+                text-align: center;
+            }
+            
+            h2 {
+                text-align: center;
+                font-family: Arial;
+            }
+            
+            p {
+                text-align: center;
+                font-family: Trebuchet MS;
+            }
+            
+            #wrapper {
+                text-align: center;
+            }
+            
+            #titleimage {
+                width: 140px;
+                height: 60px;
+            }
+            
+            #graybar {
+                width: auto;
+                height: 20px;
+                color:burlywood;
+            }
+            
+            #bluetext {
+                color: darkcyan;
+            }
+            
+            #button {
+                background-color: floralwhite;
+            }
+            
+            #wrapperalt {
+                text-align: center;
+            }
+            
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                background-color: cornflowerblue;
+                overflow: hidden;
+            }
+            
+            li a {
+                float: none;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-family: sans-serif;
+            }
+            
+            li {
+                float: left;
+                border-right:1px solid white;  
+            }
+            
+            li a:hover {
+                background-color: cadetblue;
+            }
+            
+            h1 {
+                font-family:verdana;
+            }
+            
+            .button1 {
+                border-radius: 12px;
+                border: 2px solid cornflowerblue;
+                background-color: cornflowerblue;
+                color: white;
+                
+            }
+            
+            .button1:hover {
+                border-radius: 12px;
+                border: 2px solid cadetblue;
+                background-color: cadetblue;
+                color: white;
+                
+            }
+            
+        </style>
+        
+        <link rel="icon" href="mando.png" type="image/png"/>
+        
+    </head>
+
+    <body bgcolor=#b7ffb7>
+        
+        <h1><a onclick="playAudio()" style="text-decoration: none;">Welcome to the Mandolin web companion!</a></h1>
+        <p>
+            <strong>Here you can find tabs, links to high quality luthiers, and other useful tools.</strong>
+        </p>
+        
+        <!-- Creating a horizontal line underneath the title -->
+        
+        <hr align='center' color=#0 noshade>
+        
+        <p id="bluetext" style="font-family: verdana">
+            This website is designed primarily for my use, but other people are welcome if it helps them.<br>Learning Mandolin is a great hobby!
+        </p>
+        
+        <h2>Learning Resources</h2>
+        
+        <div id='wrapper'>
+            <p>
+                Learning Mandolin can be difficult at the start, but it quickly gets much easier to learn new songs, rhythms and strumming patterns. A great resource I use a lot is a site (and YouTube channel) called <a href="https://www.mandolessons.com/">MandoLessons</a>. It has an extensive library of Mandolin lessons, tabs and tutorials.
+            </p>
+        
+            <p>
+                Another great site which is better for learning chords is <a href="https://www.mandotabs.com/" target="_blank">MandoTabs</a>. Its database of songs stretches on into the distance, and includes many popular songs, unlike <a href="https://www.mandolessons.com/" target="_blank">MandoLessons</a>.
+            </p>
+            
+            <p>
+                I have compiled a list of Mandolin songs, along with the necessary resources to learn them. Most of the songs are for beginners, <br>since that's the level I'm at.    
+            </p>
+        
+        </div>
+    
+        <!-- Using a 'wrapper' div designed to center buttons etc -->
+        
+        <div id="wrapper">
+            <a href="fileindex.html"><button class="button1">My Favourite Tabs</button></a>
+            
+            <br>
+            <br>
+            
+            <div style="border-bottom: 4px double #333"></div>
+            
+            <h2>Useful Tools</h2>
+            
+            <a href="https://www.themandolintuner.com/online-mandolin-tuner/" target="_blank"><button class="button1">An Online Mandolin Tuner</button></a>
+            
+            <br>
+            <br>
+            
+            <a href="https://www.mandolincafe.com/" target="_blank"><button class="button1">Mandolin Cafe</button></a>
+            
+            <br>
+            
+            <p>
+                Mandolin Cafe is one of the best resources there is when it comes to advice, tabs, techniques and much more. They even have a classifieds section where you can buy and sell used instruments, and they do giveaways every now and then of high quality mandolins.
+            </p>
+            
+            <div style="border-bottom: 4px double #333"></div>
+            
+            <h2>History</h2>
+            <p>
+                The history of the Mandolin is long and interesting, and I would recommend reading up on it no matter what skill level you are.
+            </p>
+            
+            <a href="https://www.mandolincafe.com/archives/briefhistory.html" target="_blank"><button class="button1">Mandolin Cafe Archive</button></a>
+            
+            <br>
+            <br>
+            
+            <a href="https://en.wikipedia.org/wiki/Mandolin#History" target="_blank"><button class="button1">Wikipedia</button></a>
+            
+            <br>
+            <br>
+            
+            <a href="http://www.marist.edu/professional-programs/center-for-lifetime-study/pdfs/14sevolutionofbluegrassweek4.pdf" target="_blank"><button class="button1">PDF Download</button></a>
+        </div>
+        
+        <br>
+        
+        <audio id="audio">
+            <source src="this%20guy%20moaned%20at%20least%20this%20loud.mp3" type="audio/mp3">
+        </audio>
+        
+        <script>
+            
+            function playAudio(){
+                var audio = document.getElementById('audio');
+                audio.play();
+                alert("Easter egg!")
+                }
+            
+        </script>
+        
+        <!--
+        <div id="wrapperalt">
+            <hr color=#0 align='center'>
+            <h4 id="homebutton"><a href="homepage.html">Home</a> <a href="fileindex.html">Favourite Tabs</a></h4>
+        </div>
+        -->
+        
+        <ul>
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="fileindex.html">Tab Directory</a></li>
+            <li><a href="luthiers.html">Luthier Directory</a></li>
+        </ul>
+        
+    </body>
+</html>
