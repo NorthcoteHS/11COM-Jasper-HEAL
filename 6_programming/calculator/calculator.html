@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <link rel="icon" href="info%20tt.jpg"> <title>Fake News - Info</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <style type="text/css">
+                  <style type="text/css">
+
+        </style>
+    </head>
+
+    <body>
+
+        <input type="text" id="number1">
+        <input type="text" id="number2">
+
+        <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">x</option>
+            <option value="/">÷</option>
+        </select>
+
+        <button onclick="solve()">Calculate</button>
+
+        <h1 id="answertext"></h1>
+        <input type="number" id="answertext" readonly>
+
+        <script>
+
+            function solve() {
+
+            var number1 = Number(document.getElementById(number1).value);
+            //*        var num1act = document.parseInt(number1);
+            var number2 = Number(document.getElementById(number2).value);
+            //*    var num2act = document.parseInt(number2);
+            var operator = document.getElementById(operator);
+            var useoperator = operator.options[operator.selectedIndex].value;
+            var answer = "";
+
+
+            document.getElementById(answertext).value = answer;
+
+            if (useoperator == "+")
+            {
+                alert(number1+number2);
+            }
+            else if (useoperator == "-"){
+                var answer = num1act-num2act;
+            }
+            else if (useoperator == "*"){
+                var answer = number1 * number2;
+            }
+            else if (useoperator == "/"){
+                var answer = number1 / number2;
+            }
+
+            }
+
+        </script>
+    </body>
+</html>
