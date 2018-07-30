@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <link rel="icon" href="info%20tt.jpg"> <title>Fake News - Info</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <style type="text/css">
+                  <style type="text/css">
+
+        </style>
+    </head>
+
+    <body>
+
+        <input type="text" id="textinput" onkeyup="checkfirst()">
+        <button onclick="piglatintrans()">Translate!</button>
+
+        <script>
+
+            var vowel = '0'
+            var input = document.getElementById(textinput);
+            var let1 = document.getElementById(textinput).charAt(0);
+
+            function checkfirst() {
+                if let1 === 'a' || let1 === 'e' || let1 === 'i' || let1 === 'o' || let1 === 'u';
+                Set(vowel) = '1';
+            }
+
+            function piglatintrans() {
+                if let1 === 'a' || let1 === 'e' || let1 === 'i' || let1 === 'o' || let1 === 'u';
+                input.concat('ay')
+
+            }
+
+        </script>
+    </body>
+</html>

@@ -12,6 +12,7 @@ Your task is to create a program that will encode a message (input by the user) 
 
 ## Steps
 
+<<<<<<< HEAD
 1. Always start by creating a new file in IDLE (Ctrl+n or Command+n).
 
     - Save the new file as `cipher.py` in your 10MCOD directory.
@@ -27,13 +28,57 @@ Your task is to create a program that will encode a message (input by the user) 
 4. Output the encoded message to the user.
 
 5. Use the resources below to guide you through the process.
+=======
+1. Always start by copying and renaming `template.html` for the current module.
+
+    - Name the file `cipher.html` in this module's directory.
+
+2. Create an `<input>` element to get the phrase from the user.
+
+3. Create a button to perform the correct operation.
+
+    - To make the button "do" something, you will need to add an `onclick` attribute and write a JavaScript function for it to call.
+    - In your JS function, you will need to get the contents of the input and perform the logic to convert each letter.
+
+4. Work on the logic...
+
+    - Start simple: Create an empty string, and make a for loop to read the input string one character at a time and add it to the end of the empty string.
+        - This should produce a string that is exactly the same as the original string.
+    - Now try to "shift" each character up by one (a->b, b->c, etc) before adding it to the empty string.
+        - To do this, you must first convert each character to its ASCII (number) value, increase that number by 1, and convert back to a character.
+        - Read in the resources below to understand ASCII and how to convert between characters and ASCII codes.
+
+5. Display the result to the user.
+
+    - Start with `alert()` (the easiest way to display information).
+    - Once that's working, try instead to display the result somewhere in your HTML body (using a `<p>` or `<input>` element).
+
+6. You're done the basic task! Now try adding features, for instance:
+
+    - Translate automatically (as you type)!
+    - Move the "cipher" logic into its own function that receives a string as input and returns a string as output.
+    - Add a "decode" option that lets you decode text that has been encoded already.
+    - Let the user choose the number of characters to shift by.
+    - Support "wrap-around", so that letters stay within the alphabet (e.g. x->y, y->z, z->a).
+    - Implement a more advanced type of cipher.
+>>>>>>> upstream/master
 
 ## Resources
 
 | Requirement | Resource |
 |-------------|----------|
+<<<<<<< HEAD
 | ASCII | <ul><li>[ASCII Alphabet Table](http://www.kerryr.net/pioneers/ascii2.htm)</li><li>[the `ord` and `chr` functions](https://www.dotnetperls.com/ord-python)</li><li>[ASCII Table (Including Non-Alphabetic Characters)](http://www.asciitable.com/)</li></ul> 
 | String Operations | <ul><li>[string - Common string operations (Python official docs)](https://docs.python.org/3/library/string.html)</li><li>[Manipulating Strings - Module 4 (Grok)](https://groklearning.com/learn/intro-python-1/manipulating-strings/0/)</li></ul> |
+=======
+| Input elements | <ul><li>[Different input types (W3Schools)](https://www.w3schools.com/tags/att_input_type.asp)</li></ul> |
+| Buttons     | <ul><li>[Button tag (W3Schools)](https://www.w3schools.com/tags/tag_button.asp)</li><li>[onclick event (W3Schools)](https://www.w3schools.com/tags/ev_onclick.asp)</li></ul> |
+| Getting contents | <ul><li>[getElementById() (W3Schools)](https://www.w3schools.com/jsref/met_document_getelementbyid.asp)</li><li>[Input text value property (W3Schools)](https://www.w3schools.com/jsref/prop_text_value.asp)</li></ul> |
+| ASCII       | <ul><li>[ASCII table and description](http://www.asciitable.com/)</li><li>[Character -> ASCII code (`charCodeAt()`)](https://www.w3schools.com/jsref/jsref_charcodeat.asp)</li><li>[ASCII code -> character (`String.fromCharCode()`)](https://www.w3schools.com/jsref/jsref_fromcharcode.asp)</li></ul> |
+| String manipulation | <ul><li>[JS string methods (W3Schools)](https://www.w3schools.com/js/js_string_methods.asp)</li><li>to get the first letter, try `str[0]` or `str.charAt(0)`</li></ul> |
+| For loops   | <ul><li>[JS for loop (W3Schools)](https://www.w3schools.com/js/js_loop_for.asp)</li><li>[Looping through each character in a string (StackOverflow)](https://stackoverflow.com/a/1967132/4080966)</li></ul> |
+| Displaying results | <ul><li>[JavaScript popup boxes (alert) (W3Schools)](https://www.w3schools.com/js/js_popup.asp)</li><li>[DOM innerHTML property](https://www.w3schools.com/jsref/prop_html_innerhtml.asp)</li></ul> |
+>>>>>>> upstream/master
 
 ## Extensions
 
@@ -54,4 +99,8 @@ Your task is to create a program that will encode a message (input by the user) 
 
 - **Note:** all code should be commented and you should have no redundant code
 
+<<<<<<< HEAD
 At the end of each day, submit a zip of your entire working directory (including this module) on MyNHS.
+=======
+Remember to commit each time you've made a major change to your code, and to push to GitHub frequently.
+>>>>>>> upstream/master
