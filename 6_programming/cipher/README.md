@@ -12,23 +12,6 @@ Your task is to create a program that will encode a message (input by the user) 
 
 ## Steps
 
-<<<<<<< HEAD
-1. Always start by creating a new file in IDLE (Ctrl+n or Command+n).
-
-    - Save the new file as `cipher.py` in your 10MCOD directory.
-
-2. Use `input` to get the message from the user.
-
-    - Remember to give the user instructions
-    
-3. Use string operations to encode the message. You will need to understand the basics of ASCII - A computer uses ASCII codes to keep track of letters. Each character corresponds to a number (a = 97, b = 98, c = 99, etc. A = 65, B = 66, C = 67 etc.). See resources for details.
-
-    - Beware of spaces, punctuation and other characters!
-
-4. Output the encoded message to the user.
-
-5. Use the resources below to guide you through the process.
-=======
 1. Always start by copying and renaming `template.html` for the current module.
 
     - Name the file `cipher.html` in this module's directory.
@@ -61,16 +44,11 @@ Your task is to create a program that will encode a message (input by the user) 
     - Let the user choose the number of characters to shift by.
     - Support "wrap-around", so that letters stay within the alphabet (e.g. x->y, y->z, z->a).
     - Implement a more advanced type of cipher.
->>>>>>> upstream/master
 
 ## Resources
 
 | Requirement | Resource |
 |-------------|----------|
-<<<<<<< HEAD
-| ASCII | <ul><li>[ASCII Alphabet Table](http://www.kerryr.net/pioneers/ascii2.htm)</li><li>[the `ord` and `chr` functions](https://www.dotnetperls.com/ord-python)</li><li>[ASCII Table (Including Non-Alphabetic Characters)](http://www.asciitable.com/)</li></ul> 
-| String Operations | <ul><li>[string - Common string operations (Python official docs)](https://docs.python.org/3/library/string.html)</li><li>[Manipulating Strings - Module 4 (Grok)](https://groklearning.com/learn/intro-python-1/manipulating-strings/0/)</li></ul> |
-=======
 | Input elements | <ul><li>[Different input types (W3Schools)](https://www.w3schools.com/tags/att_input_type.asp)</li></ul> |
 | Buttons     | <ul><li>[Button tag (W3Schools)](https://www.w3schools.com/tags/tag_button.asp)</li><li>[onclick event (W3Schools)](https://www.w3schools.com/tags/ev_onclick.asp)</li></ul> |
 | Getting contents | <ul><li>[getElementById() (W3Schools)](https://www.w3schools.com/jsref/met_document_getelementbyid.asp)</li><li>[Input text value property (W3Schools)](https://www.w3schools.com/jsref/prop_text_value.asp)</li></ul> |
@@ -78,7 +56,6 @@ Your task is to create a program that will encode a message (input by the user) 
 | String manipulation | <ul><li>[JS string methods (W3Schools)](https://www.w3schools.com/js/js_string_methods.asp)</li><li>to get the first letter, try `str[0]` or `str.charAt(0)`</li></ul> |
 | For loops   | <ul><li>[JS for loop (W3Schools)](https://www.w3schools.com/js/js_loop_for.asp)</li><li>[Looping through each character in a string (StackOverflow)](https://stackoverflow.com/a/1967132/4080966)</li></ul> |
 | Displaying results | <ul><li>[JavaScript popup boxes (alert) (W3Schools)](https://www.w3schools.com/js/js_popup.asp)</li><li>[DOM innerHTML property](https://www.w3schools.com/jsref/prop_html_innerhtml.asp)</li></ul> |
->>>>>>> upstream/master
 
 ## Extensions
 
@@ -99,8 +76,4 @@ Your task is to create a program that will encode a message (input by the user) 
 
 - **Note:** all code should be commented and you should have no redundant code
 
-<<<<<<< HEAD
-At the end of each day, submit a zip of your entire working directory (including this module) on MyNHS.
-=======
 Remember to commit each time you've made a major change to your code, and to push to GitHub frequently.
->>>>>>> upstream/master
