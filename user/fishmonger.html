@@ -40,6 +40,25 @@
             }
 
         </style>
+
+        <script>
+
+            function cost() {
+                var kg = parseInt(document.getElementById(kgfish));
+                var barramundicost = 9.80 * kg;
+                var flatheadcost = 10.99 * kg;
+
+                if (document.getElementById(barramundi).checked == true) {
+                    document.getElementById(totalcost).value = barramundicost
+                };
+
+                else if (document.getElementById(flathead).checked == true) {
+                    document.getElementById(totalcost).value = flatheadcost
+                };
+            }
+
+        </script>
+
     </head>
 
     <body>
@@ -60,30 +79,13 @@
 
         <h2 id="bodytext">Amount (kg)</h2>
 
-        <input id="kgfish" type="text" onkeyup="cost()">
+        <input id="kgfish" type="text">
 
         <h2 id="bodytext">Total Cost:</h2>
 
         <input id="totalcost" type="text" readonly>
 
-        <script>
+        <button id="button1" onclick="cost()">Calculate Cost</button>
 
-            window.onload = function cost() {
-                var kg = Number(document.getElementById(kgfish));
-                var barramundicost = 9.80 * kg;
-                var flatheadcost = 10.99 * kg;
-
-                {
-                if (document.getElementById(barramundi).checked) {
-                    document.getElementById(totalcost).value = barramundicost
-                };
-
-                if (document.getElementById(flathead).checked) {
-                    document.getElementById(totalcost).value = flatheadcost
-                };
-                }
-            }
-
-        </script>
     </body>
 </html>
