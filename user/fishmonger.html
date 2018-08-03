@@ -41,24 +41,6 @@
 
         </style>
 
-        <script>
-
-            function cost() {
-                var kg = parseInt(document.getElementById(kgfish));
-                var barramundicost = 9.80 * kg;
-                var flatheadcost = 10.99 * kg;
-
-                if (document.getElementById(barramundi).checked == true) {
-                    document.getElementById(totalcost).value = barramundicost
-                };
-
-                else if (document.getElementById(flathead).checked == true) {
-                    document.getElementById(totalcost).value = flatheadcost
-                };
-            }
-
-        </script>
-
     </head>
 
     <body>
@@ -85,7 +67,60 @@
 
         <input id="totalcost" type="text" readonly>
 
-        <button id="button1" onclick="cost()">Calculate Cost</button>
+        <button id="button1" onclick="cost();business()">Calculate Cost</button>
+
+        <br>
+
+        <br>
+
+        <h2 id="bodytext">Business Discount</h2>
+
+        <input id="bizdis" type="checkbox" onclick="business()">
+
+        <script>
+
+            var multipliercost = 1
+
+            function business() {
+                if (document.getElementById('bizdis').checked == true) {
+                    multipliercost = 0.9;
+                }
+
+                else {
+                    multipliercost = 1;
+                }
+            }
+
+            function cost() {
+                var kg = parseInt(document.getElementById('kgfish').value);
+                var barramundicost = 9.80 * kg * multipliercost;
+                var flatheadcost = 10.99 * kg * multipliercost;
+                var rocklingcost = 9.70 * kg * multipliercost;
+                var snappercost = 9.80 * kg * multipliercost;
+                var gummycost = 8.50 * kg * multipliercost;
+
+                if (document.getElementById('barramundi').checked == true) {
+                    document.getElementById('totalcost').value = barramundicost;
+                }
+
+                else if (document.getElementById('flathead').checked == true) {
+                    document.getElementById('totalcost').value = flatheadcost;
+                }
+
+                else if (document.getElementById('rockling').checked == true) {
+                    document.getElementById('totalcost').value = rocklingcost;
+                }
+
+                else if (document.getElementById('snapper').checked == true) {
+                    document.getElementById('totalcost').value = snappercost;
+                }
+
+                else if (document.getElementById('gummy').checked == true) {
+                    document.getElementById('totalcost').value = gummycost;
+                }
+            }
+
+        </script>
 
     </body>
 </html>
