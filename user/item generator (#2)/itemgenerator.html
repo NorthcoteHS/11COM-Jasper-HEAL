@@ -10,20 +10,159 @@
                 font-family: courier;
                 color: white;
                 background-color: black;
-                width: 100%;
             }
 
+            #text {
+                font-family: arial;
+                color: black;
+                width: auto;
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+            
+            #r1{
+                width: auto;
+            }
+            
+            #wrapper {
+                align-content: center;
+                text-align: center;
+                float: none;
+                width: auto;
+            }
+            
         </style>
     </head>
 
     <body>
-
-        <h1 id="title">Item Generator</h1>
-
-        <script>
-
+        
+        <div id="wrapper">
+            <h1 id="title">Item Generator</h1>
             
+            <h2 id="text">First Weapon:</h2> 
+            <input id="r1" type="text" readonly>
+            <br><br>
+            <button id="button1" onclick="roll1()">Randomize Item</button>
+            <br><br><br>
+            <hr id="standard">
+            
+            <h2 id="text">Second Weapon:</h2> 
+            <input id="r2" type="text" readonly>
+            <br><br>
+            <button id="button1" onclick="roll2()">Randomize Item</button>
+            <br><br><br>
+            <hr id="standard">
+            
+            <h2 id="text">Third Weapon:</h2> 
+            <input id="r3" type="text" readonly>
+            <br><br>
+            <button id="button1" onclick="roll3()">Randomize Item</button>
+            <br><br><br>
+            <hr id="standard">
+            
+            <h2 id="text">Fourth Weapon:</h2> 
+            <input id="r4" type="text" readonly>
+            <br><br>
+            <button id="button1" onclick="roll4()">Randomize Item</button>
+            <br><br><br>
+            <hr id="standard">
+            
+            <h2 id="text">Fifth Weapon:</h2> 
+            <input id="r5" type="text" readonly>
+            <br><br>
+            <button id="button1" onclick="roll5()">Randomize Item</button>
+            <br><br><br>
+            <hr id="standard">
+            
+            
+        </div>    
+        
+        
+        
+        <script>
+            
+            var firstrolled;
+            var secondrolled;
+            var thirdrolled;
+            var fourthrolled;
+            var fifthrolled;
+            var array = ["Broadsword", "Shield", "Helmet", "Rope", "Battle Axe", "Dagger", "Net", "Sica", "Scythe", "Spear", "Mask", "Chestplate", "Boots", "Backpack", "Chain", "Mace", "Gloves", "Chainmail", "Bow & Arrows", "Crossbow", "Bear Claw", "Scimitar", "Longsword", "Samurai Sword", "Pike"];
+            var array2 = ["Sharp ", "Swift ", "Empowered ", "Paladin's ", "Thief's ", "Oversized ", "Precise ", "Dull ", "Broken ", "Shoddy ", "Brand New ", "Reinforced ", "Fragile ", "Sneaky "]
+            
+            function roll1() {
+                
+                firstrolled = "";
+                
+                firstrolled = array[Math.floor(Math.random() * array.length)];
+                
+                if (firstrolled == secondrolled || thirdrolled || fourthrolled || fifthrolled) {
+                roll1();   
+                }
+                
+                else {    
+                    document.getElementById("r1").value = //* array2[Math.floor(Math.random() * array2.length)] + 
+                        firstrolled;
+                }
+            }
+            
+            function roll2() {
+                
+                secondrolled = "";
+                
+                secondrolled = array[Math.floor(Math.random() * array.length)];
+                
+                if (secondrolled == firstrolled || thirdrolled || fourthrolled || fifthrolled) {
+                roll2();   
+                }
+                
+                else {    
+                    document.getElementById("r2").value = //*array2[Math.floor(Math.random() * array2.length)] +
+                        secondrolled;
+                }
+            }
 
+            function roll3() {
+                
+                thirdrolled = "";
+                
+                thirdrolled = array[Math.floor(Math.random() * array.length)];
+                
+                if (thirdrolled == secondrolled || firstrolled || fourthrolled || fifthrolled) {
+                roll3();
+                }
+                
+                else {    
+                    document.getElementById("r3").value = //* array2[Math.floor(Math.random() * array2.length)] + 
+                        thirdrolled;
+                }
+            }
+            
+            function roll4() {
+                
+                fourthrolled = array[Math.floor(Math.random() * array.length)];
+                
+                if (fourthrolled == secondrolled || thirdrolled || fifthrolled || firstrolled) {
+                roll4();   
+                }
+                
+                else {    
+                    document.getElementById("r4").value = //* array2[Math.floor(Math.random() * array2.length)] + 
+                        fourthrolled;
+                }
+            }
+            
+            function roll5() {
+                
+                fifthrolled = array[Math.floor(Math.random() * array.length)];
+                
+                if (fifthrolled == secondrolled || thirdrolled || fourthrolled || firstrolled) {
+                roll5();   
+                }
+                
+                else {    
+                    document.getElementById("r5").value = array2[Math.floor(Math.random() * array2.length)] + fifthrolled;
+                }
+            }
         </script>
     </body>
 </html>
