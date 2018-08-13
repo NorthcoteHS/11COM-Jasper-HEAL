@@ -46,6 +46,8 @@
             <h1 id="title">Item Generator</h1>
             
             <h2 id="text">First Weapon:</h2> 
+            <input class="output" id="r1mod" type="text" readonly>
+            <br><br>
             <input class="output" id="r1" type="text" readonly>
             <br><br>
             <button id="button1" onclick="roll1()">Randomize Item</button>
@@ -53,6 +55,8 @@
             <hr id="standard">
             
             <h2 id="text">Second Weapon:</h2> 
+            <input class="output" id="r2mod" type="text" readonly>
+            <br><br>
             <input class="output" id="r2" type="text" readonly>
             <br><br>
             <button id="button1" onclick="roll2()">Randomize Item</button>
@@ -60,6 +64,8 @@
             <hr id="standard">
             
             <h2 id="text">Third Weapon:</h2> 
+            <input class="output" id="r3mod" type="text" readonly>
+            <br><br>
             <input class="output" id="r3" type="text" readonly>
             <br><br>
             <button id="button1" onclick="roll3()">Randomize Item</button>
@@ -67,6 +73,8 @@
             <hr id="standard">
             
             <h2 id="text">Fourth Weapon:</h2> 
+            <input class="output" id="r4mod" type="text" readonly>
+            <br><br>
             <input class="output" id="r4" type="text" readonly>
             <br><br>
             <button id="button1" onclick="roll4()">Randomize Item</button>
@@ -74,6 +82,8 @@
             <hr id="standard">
             
             <h2 id="text">Fifth Weapon:</h2> 
+            <input class="output" id="r5mod" type="text" readonly>
+            <br><br>
             <input class="output" id="r5" type="text" readonly>
             <br><br>
             <button id="button1" onclick="roll5()">Randomize Item</button>
@@ -91,8 +101,8 @@
             var thirdrolled = "";
             var fourthrolled = "";
             var fifthrolled = "";
-            var array = ["Broadsword", "Shield", "Helmet", "Rope", "Battle Axe", "Dagger", "Net", "Sica", "Scythe", "Spear", "Mask", "Chestplate", "Boots", "Backpack", "Chain", "Mace", "Gloves", "Chainmail", "Bow & Arrows", "Crossbow", "Bear Claw", "Scimitar", "Longsword", "Samurai Sword", "Pike"];
-            var array2 = ["Sharp ", "Swift ", "Empowered ", "Paladin's ", "Thief's ", "Oversized ", "Precise ", "Dull ", "Broken ", "Shoddy ", "Brand New ", "Reinforced ", "Fragile ", "Sneaky ", "Magical ", "Barbarian's ", "Godly ", "Incredible Technicolour ", "Cheap ", "Lucky ", "Cursed ", "Water Soluble ", "Preowned ", "Invisible ", "Light ", "Wizard's ", "Scout's "];
+            var array = ["1. Broadsword", "2. Shield", "3. Helmet", "4. Rope", "5. Battle Axe", "6. Dagger", "7. Net", "8. Sica", "9. Scythe", "10. Spear", "11. Mask", "12. Chestplate", "13. Boots", "14. Backpack", "15. Chain", "16. Mace", "17. Gloves", "18. Chainmail", "19. Bow & Arrows", "20. Crossbow", "21. Bear Claw", "22. Scimitar", "23. Longsword", "24. Samurai Sword", "25. Pike"];
+            var array2 = ["1. Sharp", "2. Swift", "3. Empowered", "4. Paladin's", "5. Thief's", "6. Oversized", "7. Precise", "8. Dull", "9. Broken", "10. Shoddy", "11. Brand New", "12. Reinforced", "13. Fragile", "14. Sneaky", "15. Magical", "16. Barbarian's", "17. Godly", "18. Incredible Technicolour", "19. Cheap", "20. Lucky", "21. Cursed", "22. Water Soluble", "23. Preowned", "24. Invisible", "25. Light"];
             
             function roll1() {
                 
@@ -104,9 +114,9 @@
                 roll1();   
                 }
                 
-                else {    
-                    document.getElementById("r1").value = array2[Math.floor(Math.random() * array2.length)] + 
-                        firstrolled;
+                else {
+                    document.getElementById("r1").value = firstrolled;
+                    document.getElementById("r1mod").value = array2[Math.floor(Math.random() * array2.length)]; 
                 }
             }
             
@@ -121,8 +131,8 @@
                 }
                 
                 else {    
-                    document.getElementById("r2").value = array2[Math.floor(Math.random() * array2.length)] +
-                        secondrolled;
+                    document.getElementById("r2").value = secondrolled;
+                    document.getElementById("r2mod").value = array2[Math.floor(Math.random() * array2.length)];
                 }
             }
 
@@ -137,8 +147,8 @@
                 }
                 
                 else {    
-                    document.getElementById("r3").value = array2[Math.floor(Math.random() * array2.length)] + 
-                        thirdrolled;
+                    document.getElementById("r3").value = thirdrolled;
+                    document.getElementById("r3mod").value = array2[Math.floor(Math.random() * array2.length)]; 
                 }
             }
             
@@ -153,8 +163,8 @@
                 }
                 
                 else {    
-                    document.getElementById("r4").value = array2[Math.floor(Math.random() * array2.length)] + 
-                        fourthrolled;
+                    document.getElementById("r4").value = fourthrolled;
+                    document.getElementById("r4mod").value = array2[Math.floor(Math.random() * array2.length)];
                 }
             }
             
@@ -169,7 +179,8 @@
                 }
                 
                 else {    
-                    document.getElementById("r5").value = array2[Math.floor(Math.random() * array2.length)] + fifthrolled;
+                    document.getElementById("r5").value = fifthrolled;
+                    document.getElementById("r5mod").value = array2[Math.floor(Math.random() * array2.length)];
                 }
             }
         </script>
