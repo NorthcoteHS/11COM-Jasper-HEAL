@@ -45,6 +45,16 @@
                 margin-top: 5px;
             }
             
+            div {
+                height: 21px;
+            }
+            
+            #activate {
+                font-family: arial;
+                background-color: orange;
+                color: aqua;
+            }
+            
         </style>
     </head>
 
@@ -54,38 +64,46 @@
         <br>
         <h2 class="body1">Number to be multiplied:</h2>
         <select class="select1" id="numberchosen">
-            <option id="op1">1</option>
-            <option id="op2">2</option>
-            <option id="op3">3</option>
-            <option id="op4">4</option>
-            <option id="op5">5</option>
-            <option id="op6">6</option>
-            <option id="op7">7</option>
-            <option id="op8">8</option>
-            <option id="op9">9</option>
-            <option id="op10">10</option>
+            <option id="op1" value="1">1</option>
+            <option id="op2" value="2">2</option>
+            <option id="op3" value="3">3</option>
+            <option id="op4" value="4">4</option>
+            <option id="op5" value="5">5</option>
+            <option id="op6" value="6">6</option>
+            <option id="op7" value="7">7</option>
+            <option id="op8" value="8">8</option>
+            <option id="op9" value="9">9</option>
+            <option id="op10" value="10">10</option>
         </select>
         <br><br>
         <h2 class="body2">Max number to multiply to:</h2>
         <select class="select1" id="multiply">
-            <option id="op1">1</option>
-            <option id="op2">2</option>
-            <option id="op3">3</option>
-            <option id="op4">4</option>
-            <option id="op5">5</option>
-            <option id="op6">6</option>
-            <option id="op7">7</option>
-            <option id="op8">8</option>
-            <option id="op9">9</option>
-            <option id="op10">10</option>
+            <option id="op1" value="1">1</option>
+            <option id="op2" value="2">2</option>
+            <option id="op3" value="3">3</option>
+            <option id="op4" value="4">4</option>
+            <option id="op5" value="5">5</option>
+            <option id="op6" value="6">6</option>
+            <option id="op7" value="7">7</option>
+            <option id="op8" value="8">8</option>
+            <option id="op9" value="9">9</option>
+            <option id="op10" value="10">10</option>
         </select>
         
+        <br><br>
+        
+        <button id="activate" onclick="calculate()">
+            Calculate
+        </button>
+        
+        <br><br>
+        
         <div id="equation1">
-            <input id="num1">
+            <input id="num1" type="text" readonly>
             times
-            <input id="mult1">
+            <input id="mult1" type="text" readonly>
             equals
-            <input id="ans1">
+            <input id="ans1" type="text" readonly>
         </div>
         
         <div id="equation2">
@@ -162,7 +180,158 @@
         
         <script>
             
-            
+            function calculate() {
+                
+                //* var numbermult = parseint(document.getElementById("numberchosen"));
+                //* var numbermultint = parseInt(numbermult.options[numbermult.selectedIndex].value);
+                //* var opmult = (document.getElementById("multiply"));
+                //* var opmultint = parseint(opmult.options[opmult.selectedIndex].value);
+                
+                var numbermult = document.getElementById("numberchosen");
+                var numbermint = numbermult.options[numbermult.selectedIndex].value;
+                var opmult = document.getElementById("multiply");
+                var opmint = opmult.options[opmult.selectedIndex].value;
+                
+                if (opmint == 1) {
+                    document.getElementById("num1").value = 1;
+                    document.getElementById("mult1").value = 1;
+                    document.getElementById("ans1").value = 1;
+                }
+                
+                if (opmint == 2) {
+                    document.getElementById("num1").value = 1;
+                    document.getElementById("mult1").value = 1;
+                    document.getElementById("ans1").value = 1;
+                    document.getElementById("num2").value = 2;
+                    document.getElementById("mult2").value = numbermint;
+                    document.getElementById("ans2").value = 2 * numbermint;
+                }
+                
+                if (opmint == 3) {
+                    document.getElementById("num1").value = 1;
+                    document.getElementById("mult1").value = 1;
+                    document.getElementById("ans1").value = 1;
+                    document.getElementById("num2").value = 2;
+                    document.getElementById("mult2").value = numbermint;
+                    document.getElementById("ans2").value = 2 * numbermint;
+                    document.getElementById("num3").value = 3
+                    document.getElementById("mult3").value = numbermint;
+                    document.getElementById("ans3").value = 3 * numbermint;
+                }
+                
+                if (opmint == 4) {
+                    document.getElementById("num1").value = 1;
+                    document.getElementById("mult1").value = 1;
+                    document.getElementById("ans1").value = 1;
+                    document.getElementById("num2").value = 2;
+                    document.getElementById("mult2").value = numbermint;
+                    document.getElementById("ans2").value = 2 * numbermint;
+                    document.getElementById("num3").value = 3
+                    document.getElementById("mult3").value = numbermint;
+                    document.getElementById("ans3").value = 3 * numbermint;
+                    document.getElementById("num4").value = 4;
+                    document.getElementById("mult4").value = numbermint;
+                    document.getElementById("ans4").value = 4 * numbermint;
+                }
+                
+                if (opmint == 5) {
+                    document.getElementById("num1").value = 1;
+                    document.getElementById("mult1").value = 1;
+                    document.getElementById("ans1").value = 1;
+                    document.getElementById("num2").value = 2;
+                    document.getElementById("mult2").value = numbermint;
+                    document.getElementById("ans2").value = 2 * numbermint;
+                    document.getElementById("num3").value = 3
+                    document.getElementById("mult3").value = numbermint;
+                    document.getElementById("ans3").value = 3 * numbermint;
+                    document.getElementById("num4").value = 4;
+                    document.getElementById("mult4").value = numbermint;
+                    document.getElementById("ans4").value = 4 * numbermint;
+                    document.getElementById("num5").value = 5;
+                    document.getElementById("mult5").value = numbermint;
+                    document.getElementById("ans5").value = 5 * numbermint;
+                }
+                
+                if (opmint == 6) {
+                    document.getElementById("num1").value = 1;
+                    document.getElementById("mult1").value = 1;
+                    document.getElementById("ans1").value = 1;
+                    document.getElementById("num2").value = 2;
+                    document.getElementById("mult2").value = numbermint;
+                    document.getElementById("ans2").value = 2 * numbermint;
+                    document.getElementById("num3").value = 3
+                    document.getElementById("mult3").value = numbermint;
+                    document.getElementById("ans3").value = 3 * numbermint;
+                    document.getElementById("num4").value = 4;
+                    document.getElementById("mult4").value = numbermint;
+                    document.getElementById("ans4").value = 4 * numbermint;
+                    document.getElementById("num5").value = 5;
+                    document.getElementById("mult5").value = numbermint;
+                    document.getElementById("ans5").value = 5 * numbermint;
+                    document.getElementById("num6").value = 6;
+                    document.getElementById("mult6").value = numbermint;
+                    document.getElementById("ans6").value = 6 * numbermint;
+                }
+                
+                if (opmint == 7) {
+                    document.getElementById("num1").value = 1;
+                    document.getElementById("mult1").value = 1;
+                    document.getElementById("ans1").value = 1;
+                    document.getElementById("num2").value = 2;
+                    document.getElementById("mult2").value = numbermint;
+                    document.getElementById("ans2").value = 2 * numbermint;
+                    document.getElementById("num3").value = 3
+                    document.getElementById("mult3").value = numbermint;
+                    document.getElementById("ans3").value = 3 * numbermint;
+                    document.getElementById("num4").value = 4;
+                    document.getElementById("mult4").value = numbermint;
+                    document.getElementById("ans4").value = 4 * numbermint;
+                    document.getElementById("num5").value = 5;
+                    document.getElementById("mult5").value = numbermint;
+                    document.getElementById("ans5").value = 5 * numbermint;
+                    document.getElementById("num6").value = 6;
+                    document.getElementById("mult6").value = numbermint;
+                    document.getElementById("ans6").value = 6 * numbermint;
+                    document.getElementById("num7").value = 7;
+                    document.getElementById("mult7").value = numbermint;
+                    document.getElementById("ans7").value = 7 * numbermint;
+                }
+                
+                if (opmint == 8) {
+                    document.getElementById("num1").value = 1;
+                    document.getElementById("mult1").value = 1;
+                    document.getElementById("ans1").value = 1;
+                    document.getElementById("num2").value = 2;
+                    document.getElementById("mult2").value = numbermint;
+                    document.getElementById("ans2").value = 2 * numbermint;
+                    document.getElementById("num3").value = 3
+                    document.getElementById("mult3").value = numbermint;
+                    document.getElementById("ans3").value = 3 * numbermint;
+                    document.getElementById("num4").value = 4;
+                    document.getElementById("mult4").value = numbermint;
+                    document.getElementById("ans4").value = 4 * numbermint;
+                    document.getElementById("num5").value = 5;
+                    document.getElementById("mult5").value = numbermint;
+                    document.getElementById("ans5").value = 5 * numbermint;
+                    document.getElementById("num6").value = 6;
+                    document.getElementById("mult6").value = numbermint;
+                    document.getElementById("ans6").value = 6 * numbermint;
+                    document.getElementById("num7").value = 7;
+                    document.getElementById("mult7").value = numbermint;
+                    document.getElementById("ans7").value = 7 * numbermint;
+                    document.getElementById("num8").value = 8;
+                    document.getElementById("mult8").value = numbermint;
+                    document.getElementById("ans8").value = 8 * numbermint;
+                }
+                
+                //* if (opmultint == 1) {
+                    //* document.getElementById("num1") = numbermultint;
+                    //* document.getElementById("mult1") = opmultint;
+                    //* document.getElementById("ans1") = numbermultint * 1;
+                //* }
+                    
+                
+            }
             
         </script>
     </body>
