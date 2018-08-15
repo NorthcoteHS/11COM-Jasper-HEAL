@@ -10,6 +10,10 @@
                 width: auto;
             }
             
+            input {
+                width: 50px;
+            }
+            
             .title {
                 color: aqua;
                 background-color: orange;
@@ -192,136 +196,64 @@
                 var opmult = document.getElementById("multiply");
                 var opmint = opmult.options[opmult.selectedIndex].value;
                 
-                if (opmint == 1) {
+                if (opmint >= 1) {
                     document.getElementById("num1").value = 1;
                     document.getElementById("mult1").value = 1;
                     document.getElementById("ans1").value = 1;
                 }
                 
-                if (opmint == 2) {
-                    document.getElementById("num1").value = 1;
-                    document.getElementById("mult1").value = 1;
-                    document.getElementById("ans1").value = 1;
+                if (opmint >= 2) {
                     document.getElementById("num2").value = 2;
                     document.getElementById("mult2").value = numbermint;
                     document.getElementById("ans2").value = 2 * numbermint;
                 }
                 
-                if (opmint == 3) {
-                    document.getElementById("num1").value = 1;
-                    document.getElementById("mult1").value = 1;
-                    document.getElementById("ans1").value = 1;
-                    document.getElementById("num2").value = 2;
-                    document.getElementById("mult2").value = numbermint;
-                    document.getElementById("ans2").value = 2 * numbermint;
+                if (opmint >= 3) {
                     document.getElementById("num3").value = 3
                     document.getElementById("mult3").value = numbermint;
                     document.getElementById("ans3").value = 3 * numbermint;
                 }
                 
-                if (opmint == 4) {
-                    document.getElementById("num1").value = 1;
-                    document.getElementById("mult1").value = 1;
-                    document.getElementById("ans1").value = 1;
-                    document.getElementById("num2").value = 2;
-                    document.getElementById("mult2").value = numbermint;
-                    document.getElementById("ans2").value = 2 * numbermint;
-                    document.getElementById("num3").value = 3
-                    document.getElementById("mult3").value = numbermint;
-                    document.getElementById("ans3").value = 3 * numbermint;
+                if (opmint >= 4) {
                     document.getElementById("num4").value = 4;
                     document.getElementById("mult4").value = numbermint;
                     document.getElementById("ans4").value = 4 * numbermint;
                 }
                 
-                if (opmint == 5) {
-                    document.getElementById("num1").value = 1;
-                    document.getElementById("mult1").value = 1;
-                    document.getElementById("ans1").value = 1;
-                    document.getElementById("num2").value = 2;
-                    document.getElementById("mult2").value = numbermint;
-                    document.getElementById("ans2").value = 2 * numbermint;
-                    document.getElementById("num3").value = 3
-                    document.getElementById("mult3").value = numbermint;
-                    document.getElementById("ans3").value = 3 * numbermint;
-                    document.getElementById("num4").value = 4;
-                    document.getElementById("mult4").value = numbermint;
-                    document.getElementById("ans4").value = 4 * numbermint;
+                if (opmint >= 5) {
                     document.getElementById("num5").value = 5;
                     document.getElementById("mult5").value = numbermint;
                     document.getElementById("ans5").value = 5 * numbermint;
                 }
                 
-                if (opmint == 6) {
-                    document.getElementById("num1").value = 1;
-                    document.getElementById("mult1").value = 1;
-                    document.getElementById("ans1").value = 1;
-                    document.getElementById("num2").value = 2;
-                    document.getElementById("mult2").value = numbermint;
-                    document.getElementById("ans2").value = 2 * numbermint;
-                    document.getElementById("num3").value = 3
-                    document.getElementById("mult3").value = numbermint;
-                    document.getElementById("ans3").value = 3 * numbermint;
-                    document.getElementById("num4").value = 4;
-                    document.getElementById("mult4").value = numbermint;
-                    document.getElementById("ans4").value = 4 * numbermint;
-                    document.getElementById("num5").value = 5;
-                    document.getElementById("mult5").value = numbermint;
-                    document.getElementById("ans5").value = 5 * numbermint;
+                if (opmint >= 6) {
                     document.getElementById("num6").value = 6;
                     document.getElementById("mult6").value = numbermint;
                     document.getElementById("ans6").value = 6 * numbermint;
                 }
                 
-                if (opmint == 7) {
-                    document.getElementById("num1").value = 1;
-                    document.getElementById("mult1").value = 1;
-                    document.getElementById("ans1").value = 1;
-                    document.getElementById("num2").value = 2;
-                    document.getElementById("mult2").value = numbermint;
-                    document.getElementById("ans2").value = 2 * numbermint;
-                    document.getElementById("num3").value = 3
-                    document.getElementById("mult3").value = numbermint;
-                    document.getElementById("ans3").value = 3 * numbermint;
-                    document.getElementById("num4").value = 4;
-                    document.getElementById("mult4").value = numbermint;
-                    document.getElementById("ans4").value = 4 * numbermint;
-                    document.getElementById("num5").value = 5;
-                    document.getElementById("mult5").value = numbermint;
-                    document.getElementById("ans5").value = 5 * numbermint;
-                    document.getElementById("num6").value = 6;
-                    document.getElementById("mult6").value = numbermint;
-                    document.getElementById("ans6").value = 6 * numbermint;
+                if (opmint >= 7) {
                     document.getElementById("num7").value = 7;
                     document.getElementById("mult7").value = numbermint;
                     document.getElementById("ans7").value = 7 * numbermint;
                 }
                 
-                if (opmint == 8) {
-                    document.getElementById("num1").value = 1;
-                    document.getElementById("mult1").value = 1;
-                    document.getElementById("ans1").value = 1;
-                    document.getElementById("num2").value = 2;
-                    document.getElementById("mult2").value = numbermint;
-                    document.getElementById("ans2").value = 2 * numbermint;
-                    document.getElementById("num3").value = 3
-                    document.getElementById("mult3").value = numbermint;
-                    document.getElementById("ans3").value = 3 * numbermint;
-                    document.getElementById("num4").value = 4;
-                    document.getElementById("mult4").value = numbermint;
-                    document.getElementById("ans4").value = 4 * numbermint;
-                    document.getElementById("num5").value = 5;
-                    document.getElementById("mult5").value = numbermint;
-                    document.getElementById("ans5").value = 5 * numbermint;
-                    document.getElementById("num6").value = 6;
-                    document.getElementById("mult6").value = numbermint;
-                    document.getElementById("ans6").value = 6 * numbermint;
-                    document.getElementById("num7").value = 7;
-                    document.getElementById("mult7").value = numbermint;
-                    document.getElementById("ans7").value = 7 * numbermint;
+                if (opmint >= 8) {
                     document.getElementById("num8").value = 8;
                     document.getElementById("mult8").value = numbermint;
                     document.getElementById("ans8").value = 8 * numbermint;
+                }
+                
+                if (opmint >= 9) {
+                    document.getElementById("num9").value = 9;
+                    document.getElementById("mult9").value = numbermint;
+                    document.getElementById("ans9").value = 9 * numbermint;
+                }
+                
+                if (opmint >= 10) {
+                    document.getElementById("num10").value = 10;
+                    document.getElementById("mult10").value = numbermint;
+                    document.getElementById("ans10").value = 10 * numbermint;
                 }
                 
                 //* if (opmultint == 1) {
