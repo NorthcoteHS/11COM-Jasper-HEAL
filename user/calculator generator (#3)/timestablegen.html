@@ -62,7 +62,7 @@
         </style>
     </head>
 
-    <body>
+    <body onload="reset()">
         
         <h1 class="title">Times Table Generator</h1>
         <br>
@@ -103,88 +103,132 @@
         <br><br>
         
         <div id="equation1">
-            <input id="num1" type="text" readonly>
-            times
             <input id="mult1" type="text" readonly>
+            times
+            <input id="num1" type="text" readonly>
             equals
             <input id="ans1" type="text" readonly>
         </div>
         
         <div id="equation2">
-            <input id="num2">
+            <input id="mult2" type="text" readonly>
             times
-            <input id="mult2">
+            <input id="num2" type="text" readonly>
             equals
-            <input id="ans2">
+            <input id="ans2" type="text" readonly>
         </div>
         
         <div id="equation3">
-            <input id="num3">
+            <input id="mult3" type="text" readonly>
             times
-            <input id="mult3">
+            <input id="num3" type="text" readonly>
             equals
-            <input id="ans3">
+            <input id="ans3" type="text" readonly>
         </div>
         
         <div id="equation4">
-            <input id="num4">
+            <input id="mult4" type="text" readonly>
             times
-            <input id="mult4">
+            <input id="num4" type="text" readonly>
             equals
-            <input id="ans4">
+            <input id="ans4" type="text" readonly>
         </div>
         
         <div id="equation5">
-            <input id="num5">
+            <input id="mult5" type="text" readonly>
             times
-            <input id="mult5">
+            <input id="num5" type="text" readonly>
             equals
-            <input id="ans5">
+            <input id="ans5" type="text" readonly>
         </div>
         
         <div id="equation6">
-            <input id="num6">
+            <input id="mult6" type="text" readonly>
             times
-            <input id="mult6">
+            <input id="num6" type="text" readonly>
             equals
-            <input id="ans6">
+            <input id="ans6" type="text" readonly>
         </div>
         
         <div id="equation7">
-            <input id="num7">
+            <input id="mult7" type="text" readonly>
             times
-            <input id="mult7">
+            <input id="num7" type="text" readonly>
             equals
-            <input id="ans7">
+            <input id="ans7" type="text" readonly>
         </div>
         
         <div id="equation8">
-            <input id="num8">
+            <input id="mult8" type="text" readonly>
             times
-            <input id="mult8">
+            <input id="num8" type="text" readonly>
             equals
-            <input id="ans8">
+            <input id="ans8" type="text" readonly>
         </div>
         
         <div id="equation9">
-            <input id="num9">
+            <input id="mult9" type="text" readonly>
             times
-            <input id="mult9">
+            <input id="num9" type="text" readonly>
             equals
-            <input id="ans9">
+            <input id="ans9" type="text" readonly>
         </div>
         
         <div id="equation10">
-            <input id="num10">
+            <input id="mult10" type="text" readonly>
             times
-            <input id="mult10">
+            <input id="num10" type="text" readonly>
             equals
-            <input id="ans10">
+            <input id="ans10" type="text" readonly>
         </div>
         
         <script>
+            /*
+            function reset() {
+                document.getElementById("equation1").style.display = "none";
+                document.getElementById("equation2").style.display = "none";
+                document.getElementById("equation3").style.display = "none";
+                document.getElementById("equation4").style.display = "none";
+                document.getElementById("equation5").style.display = "none";
+                document.getElementById("equation6").style.display = "none";
+                document.getElementById("equation7").style.display = "none";
+                document.getElementById("equation8").style.display = "none";
+                document.getElementById("equation9").style.display = "none";
+                document.getElementById("equation10").style.display = "none";
+            }
+            */
             
             function calculate() {
+                document.getElementById("num1").value = "";
+                document.getElementById("mult1").value = ""; 
+                document.getElementById("ans1").value = "";
+                document.getElementById("num2").value = "";
+                document.getElementById("mult2").value = ""; 
+                document.getElementById("ans2").value = "";
+                document.getElementById("num3").value = "";
+                document.getElementById("mult3").value = ""; 
+                document.getElementById("ans3").value = "";
+                document.getElementById("num4").value = "";
+                document.getElementById("mult4").value = ""; 
+                document.getElementById("ans4").value = "";
+                document.getElementById("num5").value = "";
+                document.getElementById("mult5").value = ""; 
+                document.getElementById("ans5").value = "";
+                document.getElementById("num6").value = "";
+                document.getElementById("mult6").value = ""; 
+                document.getElementById("ans6").value = "";
+                document.getElementById("num7").value = "";
+                document.getElementById("mult7").value = ""; 
+                document.getElementById("ans7").value = "";
+                document.getElementById("num8").value = "";
+                document.getElementById("mult8").value = ""; 
+                document.getElementById("ans8").value = "";
+                document.getElementById("num9").value = "";
+                document.getElementById("mult9").value = ""; 
+                document.getElementById("ans9").value = "";
+                document.getElementById("num10").value = "";
+                document.getElementById("mult10").value = ""; 
+                document.getElementById("ans10").value = "";
                 
                 var numbermult = document.getElementById("numberchosen");
                 var numbermint = numbermult.options[numbermult.selectedIndex].value;
@@ -193,8 +237,8 @@
                 
                 if (opmint >= 1) {
                     document.getElementById("num1").value = 1;
-                    document.getElementById("mult1").value = 1;
-                    document.getElementById("ans1").value = 1;
+                    document.getElementById("mult1").value = numbermint;
+                    document.getElementById("ans1").value = 1 * numbermint;
                 }
                 
                 if (opmint >= 2) {
