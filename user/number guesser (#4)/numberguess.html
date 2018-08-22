@@ -60,13 +60,13 @@
             
             function guess() {
                 
-                var guess = parseInt(document.getElementById("guess").value)
+                var guess = parseInt(document.getElementById("guess").value);
                 
                 if (numguesses == 0) {
                     document.getElementById("tries").innerHTML = "No guesses remaining!";
                     document.getElementById("highlow").innerHTML = ":(";
                     document.getElementById("guess").readOnly = "readonly";
-                    document.getElementById("reset").style.display = "block"
+                    document.getElementById("reset").style.display = "block";
                 }
                 
                 else if (guess > randnum) {
@@ -75,7 +75,7 @@
                     
                     document.getElementById("highlow").innerHTML = "Your guess was too high!";
                     
-                    document.getElementById("tries").innerHTML = "You have " + numguesses + " guesses remaining."
+                    document.getElementById("tries").innerHTML = "You have " + numguesses + " guesses remaining.";
                     
                     console.log(numguesses);
                 }
@@ -86,7 +86,7 @@
                     
                     document.getElementById("highlow").innerHTML = "Your guess was too low!";
                     
-                    document.getElementById("tries").innerHTML = "You have " + numguesses + " guesses remaining."
+                    document.getElementById("tries").innerHTML = "You have " + numguesses + " guesses remaining.";
                     
                     console.log(numguesses);
                 }
