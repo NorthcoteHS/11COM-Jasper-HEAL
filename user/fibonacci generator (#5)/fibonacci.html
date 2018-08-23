@@ -1,97 +1,23 @@
 <!DOCTYPE html>
 <html>
     <head>
-       <link rel="icon" href="info%20tt.jpg"> <title>Number Guesser</title>
+       <link rel="icon" href="info%20tt.jpg"> <title>Fibonacci Generator</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <style type="text/css">
             
-            body {
-                margin-left: 4px;
-            }
             
-            .generic {
-                font-family: arial;
-                font-size: 40pt;
-                margin: 0px;
-            }
-            
-            hr {
-                height: 2px;
-                border: 0px;
-                border-bottom: 2px solid;
-            }
-            
-            h1 {
-                font-family: arial;
-            }
-            
-            input {
-                margin-top: 30px;
-                margin-bottom: 30px;
-            }
             
         </style>
     </head>
 
     <body>
         
-        <h1 class="generic">Number Guesser</h1>
         
-        <hr>
-        
-        <h1 style="width: 200px; float: left;">Your guess:</h1>
-        
-        <input id="guess" type="text" maxlength="3">
-        
-        <button onclick="guess()">GO!</button>
-        
-        <h1 id="highlow">Make a guess!</h1>
-        
-        <h1 id="tries">You haven't guessed yet!</h1>
-        
-        <button id="reset" onclick="history.go(0)" style="display: none">RESET</button>
         
         <script>
-            var randnum = Math.floor(Math.random() * 999);
-            var numguesses = 10;
-            console.log(randnum);
-            console.log(numguesses);
             
-            function guess() {
-                
-                var guess = parseInt(document.getElementById("guess").value);
-                
-                if (numguesses == 0) {
-                    document.getElementById("tries").innerHTML = "No guesses remaining!";
-                    document.getElementById("highlow").innerHTML = ":(";
-                    document.getElementById("guess").readOnly = "readonly";
-                    document.getElementById("reset").style.display = "block";
-                }
-                
-                else if (guess > randnum) {
-                    
-                    numguesses = numguesses - 1;
-                    
-                    document.getElementById("highlow").innerHTML = "Your guess was too high!";
-                    
-                    document.getElementById("tries").innerHTML = "You have " + numguesses + " guesses remaining.";
-                    
-                    console.log(numguesses);
-                }
-                
-                else if (guess < randnum) {
-                    
-                    numguesses = numguesses - 1;
-                    
-                    document.getElementById("highlow").innerHTML = "Your guess was too low!";
-                    
-                    document.getElementById("tries").innerHTML = "You have " + numguesses + " guesses remaining.";
-                    
-                    console.log(numguesses);
-                }
-                
-            }
+            
             
         </script>
     </body>
