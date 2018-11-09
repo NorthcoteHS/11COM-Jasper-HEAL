@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>High Scores</title>
+        <title>REMINDERS</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <style type="text/css">
@@ -12,26 +12,31 @@
             #display td, #display th {
                 border: 1px solid black;
             }
+            .details {
+                height: 100px;
+                width: 300px;
+            }
         </style>
     </head>
 
     <body>
         <!-- Input form. -->
-        <h1>Enter a new high score</h1>
-        Name: <input type="text" id="hscName"><br>
-        Game: <input type="text" id="hscGame"><br>
-        Score: <input type="number" id="hscScore"><br><br>
+        <h1>Enter a new reminder</h1>
+        Title: <input type="text" id="remtitle"><br>
+        Category: <input type="text" id="remcat"><br>
+        Colour: <input class="jscolor" type="text" id="remcol" value="ab2567"><br>
+        Details: <br> <input class="details" type="text" id="remdet"><br><br>
         <button onclick="submit()">Submit</button>
 
         <!-- Report. -->
-        <h1>High Scores</h1>
+        <h1>Reminders</h1>
         <table id="display"></table>
 
 
         <!-- Include JQuery for AJAX calls. -->
         <script src="./jquery-3.3.1.min.js"></script>
 
-        <script>
+        <script src="jscolor.js">
             /*
                 Students:
                 =========
@@ -53,9 +58,10 @@
                 /* STUDENTS:  Modify the `data` field below. */
                 // Build the data to submit.
                 var data = {
-                    hscName: document.getElementById('hscName').value,
-                    hscGame: document.getElementById('hscGame').value,
-                    hscScore: document.getElementById('hscScore').value
+                    remtitle: document.getElementById('remtitle').value,
+                    remcat: document.getElementById('remcat').value,
+                    remcol: document.getElementById('remcol').value,
+                    remdet: document.getElementById('remdet').value
                 };
                 // Submit via AJAX.
                 $.ajax({
