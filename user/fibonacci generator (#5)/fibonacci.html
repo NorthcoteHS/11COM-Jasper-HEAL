@@ -6,18 +6,64 @@
 
         <style type="text/css">
             
+            .text {
+                font-family: arial;
+                color: crimson;
+            }
             
-            
+            hr {
+                height: 0px;
+                border-top: 2px solid;
+                border-top-color: crimson;
+            }
         </style>
     </head>
 
     <body>
         
+        <h1 class="text">Fibonacci Sequence Generator</h1>
         
+        <hr><br>
+        
+        <h2 class="text">First Number:</h2><input type="text" id="input1">
+        <br>
+        <h2 class="text">Second Number:</h2><input type="text" id="input2">
+        <br>
+        <h2 class="text">Number Of Repetitions:</h2><input type="text" id="input3">
+        <br><br>
+        <button onclick="declare()">Generate</button>
+        <br><br>
+        <p id="results"></p>
         
         <script>
             
+            var num1;
+            var num2;
+            var num3;
+            var repnum;
+            var progress;
             
+            function declare() {
+                num1 = parseInt(document.getElementById("input1").value);
+                num2 = parseInt(document.getElementById("input2").value);
+                repnum = parseInt(document.getElementById("input3").value);
+                progress = 0;
+                
+                console.log = num1;
+                console.log = num2;
+                console.log = repnum;
+            }
+            
+            function fibonacci() {
+                if(progress < repnum) {
+                    num3 = num1 + num2;
+                    num1 = num2;
+                    num2 = num3;
+                    document.getElementById("results").innerHTML = (num3"<p>");
+                    fibonacci();
+                }
+                
+            }
             
         </script>
     </body>
