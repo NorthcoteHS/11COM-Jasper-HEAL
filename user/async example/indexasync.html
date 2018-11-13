@@ -16,15 +16,29 @@
                 height: 100px;
                 width: 300px;
             }
+            h1 {
+                font-family: arial;
+                color: orange;
+            }
+            button {
+                border-style: solid;
+            }
+            button:hover {
+                background-color: grey;
+                color: white;
+            }
+            body {
+                font-family: arial;
+            }
         </style>
     </head>
 
     <body>
         <!-- Input form. -->
         <h1>Enter a new reminder</h1>
-        Title: <input type="text" id="remtitle"><br>
-        Category: <input type="text" id="remcat"><br>
-        Colour: <input class="jscolor" type="text" id="remcol" value="ab2567"><br>
+        Title: <input type="text" id="remtitle"><br><br>
+        Category: <input type="text" id="remcat"><br><br>
+        Colour: <input class="jscolor" type="text" id="remcol" value="ab2567"><br><br>
         Details: <br> <input class="details" type="text" id="remdet"><br><br>
         <button onclick="submit()">Submit</button>
 
