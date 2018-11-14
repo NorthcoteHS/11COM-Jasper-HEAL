@@ -101,9 +101,9 @@
             function refresh() {
                 /* STUDENTS:  Modify this code to create your own report. */
                 // Build a table to display the results.
-                var out = '<tr><th>Name</th><th>Game</th><th>Score</th></tr>';
+                var out = '<tr><th>Title</th><th>Category</th><th>Details</th><th>Color</th></tr>';
                 result.forEach(function(row) {
-                    out += '<tr><td>' + row['hscName'] + '</td><td>' + row['hscGame'] + '</td><td>' + row['hscScore'] + '</td></tr>';
+                    out += '<tr><td>' + row['remtitle'] + '</td><td>' + row['remcat'] + '</td><td>' + row['remdet'] + '</td><td>' + row['remcol'] + '</td></tr>';
                 });
                 // Update the table on the page.
                 document.getElementById('display').innerHTML = out;
