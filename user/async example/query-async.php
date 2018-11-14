@@ -18,9 +18,9 @@ Usage:
 /* --- INITIAL SETUP --- */
 /* STUDENTS: Setup your DB info here! */
 $servername = "localhost";
-$username = "demo";
-$password = "demo";
-$dbname = "dbDemo";
+$username = "hea0013";
+$password = "hea0013";
+$dbname = "hea0013";
 
 
 /* --- SQL COMMANDS --- */
@@ -28,7 +28,7 @@ $dbname = "dbDemo";
 
 // SQL to query the table for all records (ignore the "EOT" syntax).
 $querySQL = <<<EOT
-SELECT * FROM highScores ORDER BY hscScore DESC;
+SELECT * FROM reminders ORDER BY remID DESC;
 EOT;
 
 

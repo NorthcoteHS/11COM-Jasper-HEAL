@@ -14,9 +14,11 @@ Usage:
 /* --- INITIAL SETUP --- */
 /* STUDENTS: Setup your DB info here! */
 $servername = "localhost";
-$username = "demo";
-$password = "demo";
-$dbname = "dbDemo";
+$username = "hea0013";
+$password = "hea0013";
+$dbname = "hea0013";
+
+
 /* --- SQL --- */
 // This function will run within each post array including multi-dimensional arrays.
 function ExtendedAddslash(&$params, $conn) {
@@ -37,19 +39,21 @@ ExtendedAddslash($_POST, $conn);
 /* STUDENTS: Program your SQL commands here! */
 // SQL to create the table, if it doesn't exist (ignore the "EOT" syntax).
 $tableSQL = <<<EOT
-CREATE TABLE IF NOT EXISTS highScores (
-    hscID INT AUTO_INCREMENT primary key NOT NULL,
-    hscName VARCHAR(100),
-    hscGame VARCHAR(100),
-    hscScore INT
+CREATE TABLE IF NOT EXISTS reminders (
+    remID INT AUTO_INCREMENT primary key NOT NULL,
+    remtitle VARCHAR(24),
+    remcat VARCHAR(24),
+    remcol VARCHAR(6),
+    remdet VARCHAR(255)
 );
 EOT;
 // SQL to insert the new record into the table (ignore the "EOT" syntax).
 $insertSQL = <<<EOT
-INSERT INTO highScores (hscName, hscGame, hscScore) VALUES (
-    {$_POST["hscName"]},
-    {$_POST["hscGame"]},
-    {$_POST["hscScore"]}
+INSERT INTO reminders (remtitle, remcat, remcol, remdet) VALUES (
+    {$_POST["remtitle"]},
+    {$_POST["remcat"]},
+    {$_POST["remcol"]},
+    {$_POST["remdet"]}
 );
 EOT;
 /* --- SQL CONTINUED --- */
