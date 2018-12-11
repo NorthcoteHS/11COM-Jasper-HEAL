@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>REMINDERS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <style type="text/css">
+            /* Format the table to have black cell borders. */
+            #display {
+                border-collapse: collapse;
+            }
+            #display td, #display th {
+                border: 1px solid black;
+            }
+            .details {
+                height: 100px;
+                width: 300px;
+            }
+            h1 {
+                font-family: arial;
+                color: orange;
+            }
+            button {
+                border-style: solid;
+            }
+            button:hover {
+                background-color: grey;
+                color: white;
+            }
+            body {
+                font-family: arial;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- Input form. -->
+        <h1>Enter a new reminder</h1>
+        Title: <input type="text" id="remtitle"><br><br>
+        Category: <input type="text" id="remcat"><br><br>
+        Colour: <input class="jscolor" type="text" id="remcol" value="ab2567"><br><br>
+        Details: <br> <input class="details" type="text" id="remdet"><br><br>
+        <button onclick="submit()">Submit</button>
+
+        <!-- Report. -->
+        <h1>Reminders</h1>
+        <table id="display"></table>
+
+
+        <!-- Include JQuery for AJAX calls. -->
+        <script src="./jquery-3.3.1.min.js"></script>
+
+        <script src="jscolor.js"></script>
+        
+        <script>
+            /*
+                Students:
+                =========
+                Most of this script can be left as-is, without changing.
+                You will need to change these pieces:
+                    1. Change the fields of `data` in the submit() function.
+                    2. Change the entire refresh() function to create your report.
+                        - If you want your report to be a table, just modify the line inside of `result.forEach()`.
+                    3. Add any other JavaScript behaviour you want your page to have.
+                    4. Modify the HTML and CSS to add/change any content you want.
+            */
+            // Empty array (with global scope) to store the query results.
+            var result = [];
+            // Catch AJAX errors.
+            $(document).ajaxError(function(event, jqXHR, ajaxSettings, thrownError) {
+                console.log(jqXHR.responseText);
+            });
+            function submit() {
+                /* STUDENTS:  Modify the `data` field below. */
+                // Build the data to submit.
+                var data = {
+                    remtitle: document.getElementById('remtitle').value,
+                    remcat: document.getElementById('remcat').value,
+                    remcol: document.getElementById('remcol').value,
+                    remdet: document.getElementById('remdet').value
+                };
+                // Submit via AJAX.
+                $.ajax({
+                    type: 'POST',
+                    url: './insert-async.php',
+                    data: data,
+                    success: function(data, status, xhr) {
+                        query();
+                    }
+                });
+            }
+            function query(data, status, xhr) {
+                // Send the query via AJAX.
+                $.ajax({
+                    type: 'GET',
+                    url: './query-async.php',
+                    success: function(data, status, xhr) {
+                        result = JSON.parse(data);
+                        refresh();
+                    }
+                });
+            }
+            function refresh() {
+                /* STUDENTS:  Modify this code to create your own report. */
+                // Build a table to display the results.
+                var out = '<tr><th>Title</th><th>Category</th><th>Details</th><th>Color</th></tr>';
+                result.forEach(function(row) {
+                    out += '<tr><td>' + row['remtitle'] + '</td><td>' + row['remcat'] + '</td><td>' + row['remdet'] + '</td><td>' + row['remcol'] + '</td></tr>';
+                });
+                // Update the table on the page.
+                document.getElementById('display').innerHTML = out;
+            }
+            // Query the database when the window first loads.
+            window.onload = query;
+        </script>
+    </body>
+</html>
